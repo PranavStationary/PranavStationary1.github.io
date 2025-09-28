@@ -1,405 +1,350 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pranav Stationery - Your Hub for Quality Supplies</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        /* Custom CSS Variables for easy theme changes */
-        :root {
-            --primary-color: #007BFF;
-            --secondary-color: #6C757D;
-            --text-color: #343A40;
-            --light-bg: #F8F9FA;
-            --white: #FFFFFF;
-            --font-family: 'Poppins', sans-serif;
-        }
+  <meta charset="utf-8" />
+  <title>Pranav Stationary — Handpicked stationery & supplies</title>
+  <meta name="description" content="Pranav Stationary — quality stationery, pens, notebooks and creative essentials. Shop, explore collections, and contact us." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="canonical" href="https://your-github-username.github.io/pranav-stationary/" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pranav Stationary" />
+  <meta property="og:description" content="Quality stationery & creative essentials — pens, notebooks, art supplies." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1526318472351-c75fcf070eec?w=1200&q=80&fm=jpg&crop=entropy&cs=tinysrgb" />
+  <meta property="og:url" content="https://your-github-username.github.io/pranav-stationary/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- Simple structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Pranav Stationary",
+    "description": "Quality stationery, pens, notebooks and creative essentials.",
+    "url": "https://your-github-username.github.io/pranav-stationary/",
+    "logo": "https://images.unsplash.com/photo-1526318472351-c75fcf070eec?w=600&q=80&fm=jpg&crop=entropy&cs=tinysrgb"
+  }
+  </script>
 
-        /* Global Reset and Typography */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <!-- Google Font (keeps design professional) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-        body {
-            font-family: var(--font-family);
-            color: var(--text-color);
-            line-height: 1.6;
-            background-color: var(--white);
-            /* Smoother scrolling for navigation */
-            scroll-behavior: smooth;
-        }
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa6b2;
+      --accent:#ffca28;
+      --glass: rgba(255,255,255,0.04);
+      --max-w:1100px;
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background: linear-gradient(180deg,#071028 0%, #06141d 100%);
+      color:#e6eef6;
+      line-height:1.45;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:24px;
+      display:flex;
+      justify-content:center;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
+    .wrap{width:100%;max-width:var(--max-w);}
 
-        h2, h3, h4 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
+    header{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:22px;
+    }
+    .brand{
+      display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;
+    }
+    .logo{
+      width:56px;height:56px;border-radius:12px;display:grid;place-items:center;
+      background:linear-gradient(135deg,var(--accent),#ff7b7b);
+      color:#071027;font-weight:800;font-size:20px;box-shadow:0 6px 20px rgba(255,202,40,0.12);
+    }
+    nav{display:flex;gap:14px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px}
+    nav a.cta{background:var(--accent);color:#071027;padding:10px 14px;border-radius:10px;text-transform:uppercase;font-weight:700}
+    .hero{
+      background: linear-gradient(90deg, rgba(255,202,40,0.06), rgba(255,123,123,0.03));
+      padding:28px;border-radius:var(--radius);display:grid;grid-template-columns:1fr 420px;gap:18px;
+      align-items:center;margin-bottom:20px;backdrop-filter: blur(6px);
+      box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+    }
+    .hero h1{font-size:28px;margin:0 0 8px}
+    .hero p{margin:0;color:var(--muted)}
+    .search{
+      margin-top:14px;display:flex;gap:8px;
+    }
+    .search input{
+      flex:1;padding:12px 14px;border-radius:10px;border:0;background:var(--glass);color:inherit;outline:none;
+    }
+    .search button{padding:12px 14px;border-radius:10px;border:0;background:#0ea5a1;color:#071027;font-weight:700}
 
-        /* Header & Navigation */
-        header {
-            background-color: var(--white);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    /* Product grid */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px}
+    @media (max-width:980px){.hero{grid-template-columns:1fr;}.grid{grid-template-columns:repeat(2,1fr)}nav{display:none}}
+    @media (max-width:640px){.grid{grid-template-columns:1fr}.search{flex-direction:column} .logo{width:48px;height:48px}}
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+      padding:12px;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+    .card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(2,6,23,0.6)}
+    .thumb{width:100%;height:180px;display:block;border-radius:10px;object-fit:cover;margin-bottom:10px}
+    .meta{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted)}
+    .price{font-weight:800;color:var(--accent)}
+    .btn{display:inline-block;padding:10px 12px;border-radius:10px;background:var(--accent);color:#071027;font-weight:700;text-decoration:none}
 
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-        }
+    /* Gallery small */
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:18px 0}
+    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:8px;cursor:pointer;border:1px solid rgba(255,255,255,0.03)}
+    @media (max-width:640px){.gallery{grid-template-columns:repeat(2,1fr)} .gallery img{height:100px}}
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary-color);
-        }
+    /* Footer */
+    footer{margin-top:18px;padding:14px;border-radius:10px;background:transparent;color:var(--muted);display:flex;justify-content:space-between;align-items:center;font-size:13px}
+    .social a{margin-left:8px;color:var(--muted);text-decoration:none}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
+    /* Lightbox */
+    .lightbox{
+      position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,6,23,0.75);z-index:9999;padding:20px;
+    }
+    .lightbox.open{display:flex}
+    .lightbox img{max-width:92%;max-height:86%;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,0.7)}
+    .close-x{position:absolute;right:22px;top:18px;color:#fff;font-size:20px;background:rgba(255,255,255,0.04);padding:8px;border-radius:8px;cursor:pointer}
 
-        nav ul li a {
-            text-decoration: none;
-            color: var(--text-color);
-            padding: 0 15px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
+    /* Badge */
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);color:var(--muted);font-size:12px}
 
-        nav ul li a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: background-color 0.3s, transform 0.2s;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: #0056b3; /* Darker shade of primary */
-            transform: translateY(-2px);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: url('https://images.unsplash.com/photo-1549493540-5e58043694f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTI2MzZ8MHwxfHNlYXJjaHw3fHxzY2hvb2wlMjBzdXBwbGllc3xlbnwwfHx8fDE2OTk0NTg4NzY&ixlib=rb-4.0.3&q=80&w=1400') no-repeat center center/cover;
-            height: 60vh;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: var(--white);
-            position: relative;
-        }
-
-        /* Overlay for better text readability */
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.4);
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-            color: var(--white);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-
-        /* Sections */
-        .products-section, .about-section, .contact-section {
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .products-section {
-            background-color: var(--light-bg);
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .product-card {
-            background-color: var(--white);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .product-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 6px;
-            margin-bottom: 15px;
-        }
-
-        .product-card h4 {
-            margin-top: 0;
-            font-size: 1.2rem;
-        }
-
-        /* About Us Section */
-        .about-section .container {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            text-align: left;
-            gap: 40px;
-        }
-
-        .about-img {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            border-radius: 8px;
-            object-fit: cover;
-        }
-
-        .about-text {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            background-color: var(--primary-color);
-            color: var(--white);
-        }
-
-        .contact-section h3, .contact-section p {
-            color: var(--white);
-        }
-
-        #contactForm {
-            max-width: 600px;
-            margin: 30px auto 0;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        #contactForm input, #contactForm textarea {
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            font-family: var(--font-family);
-            font-size: 1rem;
-        }
-
-        #contactForm button {
-            align-self: flex-start;
-        }
-
-        #formMessage {
-            margin-top: 10px;
-            font-weight: 600;
-        }
-        .hidden {
-            display: none;
-        }
-
-
-        /* Footer */
-        footer {
-            background-color: var(--text-color);
-            color: var(--light-bg);
-            padding: 20px 0;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-
-        /* Media Queries for Responsiveness */
-        @media (max-width: 768px) {
-            header .container {
-                flex-direction: column;
-            }
-
-            nav ul {
-                padding-top: 10px;
-                justify-content: center;
-            }
-
-            nav ul li a {
-                padding: 0 10px;
-            }
-
-            .hero h2 {
-                font-size: 2rem;
-            }
-
-            .about-section .container {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .about-img {
-                max-width: 100%;
-            }
-        }
-    </style>
+    /* small text */
+    .muted{color:var(--muted);font-size:13px}
+  </style>
 </head>
 <body>
-
+  <div class="wrap" role="main">
     <header>
-        <div class="container">
-            <h1 class="logo">Pranav Stationery</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+      <a class="brand" href="#" aria-label="Pranav Stationary homepage">
+        <div class="logo" aria-hidden="true">PS</div>
+        <div>
+          <div style="font-weight:800;font-size:16px">Pranav Stationary</div>
+          <div class="muted" style="font-size:12px">Handpicked stationery & creative supplies</div>
         </div>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#products">Products</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <h2>Fuel Your Creativity. Find Your Supplies.</h2>
-            <p>Quality pens, notebooks, and office essentials delivered right to your desk.</p>
-            <a href="#products" class="btn">Explore Products</a>
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <div class="badge">Local • Quality • Affordable</div>
+        <h1 id="hero-title">Beautiful stationery that sparks creativity</h1>
+        <p>From daily notebooks and pens to premium artist tools — curated with care. Browse our latest collection and contact us for bulk orders.</p>
+
+        <div class="search" role="search" aria-label="Search products">
+          <input id="searchInput" placeholder="Search pens, notebooks, markers..." aria-label="Search products" />
+          <button id="searchBtn" aria-label="Search button">Search</button>
         </div>
+
+        <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
+          <a class="btn" href="#products">Shop Collection</a>
+          <div class="muted" style="margin-left:8px">Free local pickup</div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <!-- hero image with srcset for optimization -->
+        <img
+          alt="Assorted colorful stationery — pens and notebooks"
+          src="https://images.unsplash.com/photo-1526318472351-c75fcf070eec?w=800&q=70&fm=jpg&crop=entropy&cs=tinysrgb"
+          srcset="
+            https://images.unsplash.com/photo-1526318472351-c75fcf070eec?w=400&q=60&fm=jpg&crop=entropy&cs=tinysrgb 400w,
+            https://images.unsplash.com/photo-1526318472351-c75fcf070eec?w=800&q=70&fm=jpg&crop=entropy&cs=tinysrgb 800w,
+            https://images.unsplash.com/photo-1526318472351-c75fcf070eec?w=1200&q=80&fm=jpg&crop=entropy&cs=tinysrgb 1200w
+          "
+          sizes="(max-width: 600px) 100vw, 420px"
+          loading="lazy"
+          style="width:100%;height:260px;object-fit:cover;border-radius:10px;box-shadow:0 10px 30px rgba(2,6,23,0.6)"
+        />
+        <div style="display:flex;gap:8px;align-items:center;justify-content:space-between">
+          <div class="muted">Trusted by students & artists</div>
+          <div style="font-weight:800">⭐ 4.8 (1.2k+)</div>
+        </div>
+      </div>
     </section>
 
-    <section id="products" class="products-section">
-        <div class="container">
-            <h3>Our Best Sellers</h3>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1596468132805-4c03b143a577?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTI2MzZ8MHwxfHNlYXJjaHw1fHnub3RlYm9va3N8ZW58MHx8fHwxNjk5NDU4ODc2&ixlib=rb-4.0.3&q=80&w=400" alt="Premium Notebooks" loading="lazy">
-                    <h4>Premium Notebooks</h4>
-                    <p>High-quality paper for smooth writing and journaling.</p>
-                </div>
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1579549320645-a1c1d88a291f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTI2MzZ8MHwxfHNlYXJjaHwzfHZwZW5zJTIwYW5kJTIwbWFya2Vyc3xlbnwwfHx8fDE2OTk0NTkwNTc&ixlib=rb-4.0.3&q=80&w=400" alt="Pens and Markers" loading="lazy">
-                    <h4>Pens & Markers</h4>
-                    <p>Fountain pens, gel pens, and vibrant markers for all your needs.</p>
-                </div>
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1588701620803-b05c567e9b0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTI2MzZ8MHwxfHNlYXJjaHw4fHxjbGlwcyUyMGVhcmVyfGVufDB8fHx8MTY5OTQ1OTA5MA&ixlib=rb-4.0.3&q=80&w=400" alt="Office Supplies" loading="lazy">
-                    <h4>Office Essentials</h4>
-                    <p>Staplers, tape, clips, and organization tools for the office.</p>
-                </div>
+    <main>
+      <section id="products" aria-labelledby="products-title" style="margin-top:14px">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+          <h2 id="products-title" style="margin:0">Featured products</h2>
+          <div class="muted">Quality picks for everyday use</div>
+        </div>
+
+        <div class="grid" role="list">
+          <!-- Product 1 -->
+          <article class="card" role="listitem" aria-label="Classic spiral notebook">
+            <img class="thumb" alt="Spiral notebook with patterned cover"
+              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=70&fm=jpg&crop=entropy&cs=tinysrgb"
+              srcset="
+                https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&q=60&fm=jpg&crop=entropy&cs=tinysrgb 400w,
+                https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=70&fm=jpg&crop=entropy&cs=tinysrgb 800w
+              "
+              sizes="(max-width:640px) 100vw, 33vw"
+              loading="lazy" width="800" height="500">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <div style="font-weight:700">Classic Spiral Notebook</div>
+              <div class="meta"><span class="muted">A5 • 120 pages</span> <span class="price">₹149</span></div>
+              <div style="margin-top:8px"><a class="btn" href="#contact" aria-label="Buy notebook">Buy</a></div>
             </div>
-        </div>
-    </section>
+          </article>
 
-    <section id="about" class="about-section">
-        <div class="container">
-            <img src="https://images.unsplash.com/photo-1524169735496-d8d91c782782?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTI2MzZ8MHwxfHNlYXJjaHw0fHdzdGF0aW9uZXJ5JTIwc2hvcHxlbnwwfHx8fDE2OTk0NTg4NzY&ixlib=rb-4.0.3&q=80&w=600" alt="Pranav Stationery Shop Interior" loading="lazy" class="about-img">
-            <div class="about-text">
-                <h3>Our Story</h3>
-                <p>Pranav Stationery was founded with a simple mission: to provide the highest quality stationery products to students, artists, and professionals. We believe that the right tools inspire great work. We are committed to sustainability, quality, and exceptional customer service.</p>
+          <!-- Product 2 -->
+          <article class="card" role="listitem" aria-label="Gel pens set">
+            <img class="thumb" alt="Set of colorful gel pens"
+              src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=70&fm=jpg&crop=entropy&cs=tinysrgb"
+              srcset="
+                https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&q=60&fm=jpg&crop=entropy&cs=tinysrgb 400w,
+                https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=70&fm=jpg&crop=entropy&cs=tinysrgb 800w
+              "
+              sizes="(max-width:640px) 100vw, 33vw"
+              loading="lazy">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <div style="font-weight:700">Gel Pen Pack (12)</div>
+              <div class="meta"><span class="muted">Smooth ink • Quick dry</span> <span class="price">₹199</span></div>
+              <div style="margin-top:8px"><a class="btn" href="#contact" aria-label="Buy pens">Buy</a></div>
             </div>
-        </div>
-    </section>
+          </article>
 
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h3>Get in Touch</h3>
-            <p>Have questions or need a bulk order? Contact us today!</p>
-            <form id="contactForm">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-                <p id="formMessage" class="hidden"></p>
-            </form>
+          <!-- Product 3 -->
+          <article class="card" role="listitem" aria-label="Sketching pencil kit">
+            <img class="thumb" alt="Wooden pencils and sketching set"
+              src="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?w=800&q=70&fm=jpg&crop=entropy&cs=tinysrgb"
+              srcset="
+                https://images.unsplash.com/photo-1518773553398-650c184e0bb3?w=400&q=60&fm=jpg&crop=entropy&cs=tinysrgb 400w,
+                https://images.unsplash.com/photo-1518773553398-650c184e0bb3?w=800&q=70&fm=jpg&crop=entropy&cs=tinysrgb 800w
+              "
+              sizes="(max-width:640px) 100vw, 33vw"
+              loading="lazy">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <div style="font-weight:700">Sketching Pencil Kit</div>
+              <div class="meta"><span class="muted">6 pencils • eraser • sharpener</span> <span class="price">₹249</span></div>
+              <div style="margin-top:8px"><a class="btn" href="#contact" aria-label="Buy pencils">Buy</a></div>
+            </div>
+          </article>
+
+          <!-- Product 4 -->
+          <article class="card" role="listitem" aria-label="Sticky notes set">
+            <img class="thumb" alt="Colorful sticky notes"
+              src="https://images.unsplash.com/photo-1505576391880-2a3b3f1fa1d3?w=800&q=70&fm=jpg&crop=entropy&cs=tinysrgb"
+              loading="lazy">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <div style="font-weight:700">Sticky Notes Set</div>
+              <div class="meta"><span class="muted">Assorted colors</span> <span class="price">₹89</span></div>
+              <div style="margin-top:8px"><a class="btn" href="#contact">Buy</a></div>
+            </div>
+          </article>
+
+          <!-- Product 5 -->
+          <article class="card" role="listitem" aria-label="Premium marker set">
+            <img class="thumb" alt="Artist markers laid out"
+              src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=70&fm=jpg&crop=entropy&cs=tinysrgb"
+              loading="lazy">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <div style="font-weight:700">Premium Marker Set</div>
+              <div class="meta"><span class="muted">Dual-tip • Long lasting</span> <span class="price">₹549</span></div>
+              <div style="margin-top:8px"><a class="btn" href="#contact">Buy</a></div>
+            </div>
+          </article>
+
+          <!-- Product 6 -->
+          <article class="card" role="listitem" aria-label="Craft glue & tape pack">
+            <img class="thumb" alt="Glue bottle and tape"
+              src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=800&q=70&fm=jpg&crop=entropy&cs=tinysrgb"
+              loading="lazy">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <div style="font-weight:700">Craft Glue & Tape Pack</div>
+              <div class="meta"><span class="muted">Perfect for projects</span> <span class="price">₹139</span></div>
+              <div style="margin-top:8px"><a class="btn" href="#contact">Buy</a></div>
+            </div>
+          </article>
         </div>
-    </section>
+      </section>
+
+      <section id="gallery" aria-labelledby="gallery-title">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin:6px 0 12px">
+          <h2 id="gallery-title" style="margin:0">Gallery</h2>
+          <div class="muted">Click images to enlarge</div>
+        </div>
+
+        <div class="gallery" id="photoGallery">
+          <img alt="Open notebook and pen" data-full="https://images.unsplash.com/photo-1526318472351-c75fcf070eec?w=1600&q=80&fm=jpg&crop=entropy&cs=tinysrgb"
+               src="https://images.unsplash.com/photo-1526318472351-c75fcf070eec?w=600&q=60&fm=jpg&crop=entropy&cs=tinysrgb" loading="lazy">
+          <img alt="Colorful pens" data-full="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1600&q=80&fm=jpg&crop=entropy&cs=tinysrgb"
+               src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=60&fm=jpg&crop=entropy&cs=tinysrgb" loading="lazy">
+          <img alt="Artist setup" data-full="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?w=1600&q=80&fm=jpg&crop=entropy&cs=tinysrgb"
+               src="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?w=600&q=60&fm=jpg&crop=entropy&cs=tinysrgb" loading="lazy">
+          <img alt="Stationery flatlay with washi tapes" data-full="https://images.unsplash.com/photo-1505576391880-2a3b3f1fa1d3?w=1600&q=80&fm=jpg&crop=entropy&cs=tinysrgb"
+               src="https://images.unsplash.com/photo-1505576391880-2a3b3f1fa1d3?w=600&q=60&fm=jpg&crop=entropy&cs=tinysrgb" loading="lazy">
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:12px;border-radius:12px;padding:16px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);">
+        <div style="display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap">
+          <div style="flex:1;min-width:260px">
+            <h3 style="margin-top:0">Contact / Bulk Orders</h3>
+            <p class="muted">Message us for bulk pricing, local delivery or collaboration.</p>
+            <p style="margin:8px 0"><strong>Email:</strong> <a href="mailto:pranav@stationary.example" style="color:var(--accent);text-decoration:none">pranav@stationary.example</a></p>
+            <p style="margin:8px 0"><strong>Phone:</strong> <a href="tel:+911234567890" style="color:var(--accent);text-decoration:none">+91 12345 67890</a></p>
+            <p class="muted" style="font-size:13px">You can replace these contact details with real ones in the HTML file.</p>
+          </div>
+
+          <form id="contactForm" style="width:360px;max-width:100%;background:rgba(255,255,255,0.02);padding:12px;border-radius:10px" onsubmit="return handleContactSubmit(event)" aria-label="Contact form">
+            <label class="muted" for="name">Name</label><br/>
+            <input id="name" name="name" required placeholder="Your name" style="width:100%;margin-bottom:8px;padding:10px;border-radius:8px;border:0;background:var(--glass);color:inherit" />
+            <label class="muted" for="email">Email</label><br/>
+            <input id="email" name="email" type="email" required placeholder="you@example.com" style="width:100%;margin-bottom:8px;padding:10px;border-radius:8px;border:0;background:var(--glass);color:inherit" />
+            <label class="muted" for="msg">Message</label><br/>
+            <textarea id="msg" name="message" required placeholder="Tell us about your order or question" style="width:100%;margin-bottom:8px;padding:10px;border-radius:8px;border:0;background:var(--glass);color:inherit;min-height:90px"></textarea>
+            <button class="btn" type="submit" style="width:100%;">Send Message</button>
+            <div id="contactFeedback" style="margin-top:8px;color:var(--muted);font-size:13px"></div>
+          </form>
+        </div>
+      </section>
+    </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; <span id="currentYear"></span> Pranav Stationery. All rights reserved.</p>
-        </div>
+      <div>© <strong>Pranav Stationary</strong> — Crafted with care</div>
+      <div class="social" aria-hidden="true">
+        <a href="#" title="Instagram">IG</a>
+        <a href="#" title="WhatsApp">WA</a>
+        <a href="#" title="Facebook">FB</a>
+      </div>
     </footer>
+  </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // 1. Dynamically Update Copyright Year in Footer
-            const currentYearElement = document.getElementById('currentYear');
-            if (currentYearElement) {
-                currentYearElement.textContent = new Date().getFullYear();
-            }
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <button class="close-x" aria-label="Close image" id="lbClose">✕</button>
+    <img id="lbImage" alt="">
+  </div>
 
-            // 2. Simple Form Submission Handler (simulates success)
-            const contactForm = document.getElementById('contactForm');
-            const formMessage = document.getElementById('formMessage');
-
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault(); // Stop the default form submission (prevents page refresh)
-
-                    // Get form data (you'd send this to a backend service in a real app)
-                    const name = this.querySelector('input[type="text"]').value;
-
-                    // Show success message
-                    formMessage.textContent = `Thank you, ${name}! Your message has been received. We'll be in touch soon.`;
-                    formMessage.style.color = 'yellow'; // Use yellow text for visibility on blue background
-                    formMessage.classList.remove('hidden');
-
-                    // Clear the form fields after a short delay
-                    setTimeout(() => {
-                        contactForm.reset();
-                    }, 50);
-
-                    // Hide the message after 5 seconds
-                    setTimeout(() => {
-                        formMessage.classList.add('hidden');
-                    }, 5000);
-                });
-            }
-        });
-    </script>
-</body>
-</html>
+  <script>
+    // Minimal JS: search mock, gallery lightbox, form handler.
+    (function(){
+      const searchInput = document.getElementById('searchInput');
+      const searchBtn = document.getElementById('searchBtn');
+      searchBtn.addEventListener('click', () => {
+        const q = (searchInput.value||'').trim();
+        if(!q){ alert('Try typing "pens" or "notebook" — this demo search highlights results on page.'); return; }
+        // Simple client-side highlight: scroll to first matching card
+        const items = [...document.querySelectorAll('.card')];
+        const found = items.find(it => it.innerText.toLowerCase().includes(q.toLowerCase()));
+        if(found){ found.scrollIntoView({behavior:'smooth', block:'center'}); found.style.boxShadow='0 24px 60px rgba(255,202,40,0.12)'; setTimeout(()=>found.style.boxShadow='',2200)
